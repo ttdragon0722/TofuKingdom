@@ -37,6 +37,32 @@ function characterDisplay() {
         }
     }
 }
+function settingUpdate() {
+    const grid = $(".identity-display");
+    grid.html(" ");
+    let Identity = JSON.parse(
+        localStorage.getItem("Identity")
+    );
+    console.log(Identity);
+    for (let p = 0; p < Identity.length; p++) {
+        grid.append(
+            `<div class="identity">
+            <div class="id-table  ${Identity[p]["class"] == "公主派" ? "good" : Identity[p]["class"] == "中立" ? "mid" : "bad"}">
+                <div class="index">${p + 1}</div>
+                <div class="id">${Identity[p]["name"]}</div>
+                <div class="id-group">${Identity[p]["class"]}</div>
+                ${p + 1 <= 3 ? p + 1 == 3 ? `<div ><button class="moveDown"><i class="fa-solid fa-circle-arrow-down"></i></button></div>` : "" : `<div><button class="moveUp"><i class="fa-solid fa-circle-arrow-up"></i></button></div>
+                <div ><button class="moveDown"><i class="fa-solid fa-circle-arrow-down"></i></button></div>`}
+                
+            </div>
+            <div class="rule">
+                ${Identity[p]["rule"]}
+            </div>
+        </div>`
+        );
+    }
+
+}
 
 
 $(function () {
@@ -105,29 +131,30 @@ $(function () {
                             characterDisplay();
                         });
                     }
-                    if (data["trigger"].id == "settingBtn                       ") {
+                    if (data["trigger"].id == "settingBtn") {
                         const grid = $(".identity-display");
-
+                        grid.html(" ");
                         let Identity = JSON.parse(
                             localStorage.getItem("Identity")
                         );
-                        // for (let p = 0;p < Identity.length ; p++) {
-                        //     grid.append(
-                        //         `<div class="identity">
-                        //         <div class="id-table  ${Identity[p]["class"] == "公主派"? "good":Identity[p]["class"] == "中立"? "mid":"bad"}">
-                        //             <div class="index">${p+1}</div>
-                        //             <div class="id">${Identity[p]["name"]}</div>
-                        //             <div class="id-group">${Identity[p]["class"]}</div>
-                        //             <div><button  class="moveUp"><i class="fa-solid fa-circle-arrow-up"></i></button></div>
-                        //             <div ><button class="moveDown"><i class="fa-solid fa-circle-arrow-down"></i></button></div>
-                        //         </div>
-                        //         <div class="rule">
-                        //             ${Identity[p]["rule"]}
-                        //         </div>
-                        //     </div>`
-                        //     );
-                        // }
-                        settingUpdate();
+                        console.log(Identity);
+                        for (let p = 0; p < Identity.length; p++) {
+                            grid.append(
+                                `<div class="identity">
+            <div class="id-table  ${Identity[p]["class"] == "公主派" ? "good" : Identity[p]["class"] == "中立" ? "mid" : "bad"}">
+                <div class="index">${p + 1}</div>
+                <div class="id">${Identity[p]["name"]}</div>
+                <div class="id-group">${Identity[p]["class"]}</div>
+                ${p + 1 <= 3 ? p + 1 == 3 ? `<div ><button class="moveDown"><i class="fa-solid fa-circle-arrow-down"></i></button></div>` : "" : `<div><button class="moveUp"><i class="fa-solid fa-circle-arrow-up"></i></button></div>
+                <div ><button class="moveDown"><i class="fa-solid fa-circle-arrow-down"></i></button></div>`}
+                
+            </div>
+            <div class="rule">
+                ${Identity[p]["rule"]}
+            </div>
+        </div>`
+                            );
+                        }
 
 
                         $(document).on("click", ".moveUp", function () {
@@ -153,63 +180,6 @@ $(function () {
                             settingUpdate();
                         });
                     }
-
-
-
-                    // if (data["trigger"].id === "back") {
-                    //     let Identity = JSON.parse(
-                    //         localStorage.getItem("Identity")
-                    //     );
-                    //     let PlayerAmount = parseInt(localStorage.getItem("PlayerAmount"));
-                    //     const list = $(".qlist");
-                    //     const minus_btn = $(".minus");
-                    //     const add_btn = $(".add");
-                    //     const players = $("#players");
-                    //     players.val(PlayerAmount);
-                    //     for (let i = 0; i < Identity.length; i++) {
-                    //         list.append(`<li class=" ${Identity[p]["class"] == "公主派"? "good":Identity[p]["class"] == "中立"? "mid":"bad"}"> (${Identity[i]["class"]}) ${Identity[i]["name"]} => ${Identity[i]["rule"]} </li>`);
-                    //     }
-
-                    //     players.on("change", function () {
-                    //         if ($(this).val() < 4 ) {
-                    //             $(this).val(4);
-                    //         }
-
-                    //         if ($(this).val() > 7 ) {
-                    //             $(this).val(7);
-                    //         }
-                    //         characterDisplay();
-                    //         PlayerAmount = $(this).val();
-                    //         localStorage.setItem("PlayerAmount", PlayerAmount);
-                    //     });
-
-                    //     characterDisplay();
-
-                    //     minus_btn.click(function (e) {
-                    //         e.preventDefault();
-                    //         if (players.val() > 4) {
-                    //             players.val(parseInt(players.val()) - 1);
-                    //             PlayerAmount = players.val();
-                    //             localStorage.setItem("PlayerAmount", PlayerAmount);
-                    //         }
-                    //         characterDisplay();
-                    //     });
-
-                    //     add_btn.click(function (e) {
-                    //         e.preventDefault();
-                    //         console.log("page.js");
-                    //         if (players.val() < 7) {
-                    //             players.val(parseInt(players.val()) + 1);
-                    //             PlayerAmount = players.val();
-                    //             localStorage.setItem("PlayerAmount", PlayerAmount);
-                    //         }
-                    //         characterDisplay();
-                    //         PlayerAmount = players.val();
-                    //         console.log(PlayerAmount);
-                    //         localStorage.setItem("PlayerAmount", PlayerAmount);
-                    //     });
-
-                    // }
                     contentEnter();
 
                 },

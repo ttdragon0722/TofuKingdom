@@ -16,5 +16,10 @@ def setting():
 def about():
     return render_template("question.html")
 
+
+@app.route("/play")
+def play():
+    return render_template("play.html")
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=81,debug=True)
