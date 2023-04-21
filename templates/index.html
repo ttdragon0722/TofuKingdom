@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tofu kingdom</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/style/initialize.min.css">
+    <link rel="stylesheet" href="../static/style/style.css">
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="../static/js/index.js"></script>
+
+
+    <link rel="stylesheet" href="../static/style/square.css">
+    <script src="../static/js/square.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+</head>
+
+<body data-barba="wrapper">
+    <div class="area">
+        <ul class="circles">
+            <li>QAQ</li>
+            <li>OAO</li>
+            <li>-V-</li>
+            <li>O o O</li>
+            <li>==</li>
+            <li>T-T</li>
+            <li>UwU</li>
+            <li>oWo</li>
+            <li>._.</li>
+            <li>-_-</li>
+        </ul>
+    </div>
+    <div class="app" data-barba="container" data-barba-namespace="home-section">
+        <div class="group">
+            <div class="title">TOFU Kingdom</div>
+        </div>
+
+        <div class="group">
+            <div class="subtitle">
+                setting:
+            </div>
+        </div>
+        <div class="group">
+            <div>遊玩人數</div>
+        </div>
+        <div class="group">
+            <button class="minus">-</button>
+            <input type="number" name="" id="players" value="4" min="4" max="8">
+            <button class="add">+</button>
+        </div>
+
+        <div class="group">
+            身分列表
+        </div>
+
+        <div class="group">
+
+            <ul class="qlist">
+            </ul>
+        </div>
+
+        <div class="func-bar">
+            <a href="/setting" id="settingBtn"><i class="fa-solid fa-gear"></i></a>
+            <a href="" id="startBtn">開始遊戲</a>
+            <a href="/question" id="questBtn"><i class="fa-regular fa-circle-question"></i></a>
+        </div>
+    </div>
+
+</body>
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
+<script src="../static/js/pageAnim.js"></script>
+<script src="../static/js/home.js"></script>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tofu kingdom</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/style/initialize.min.css">
+    <link rel="stylesheet" href="../static/style/style.css">
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="../static/js/index.js"></script>
+
+    <link rel="stylesheet" href="../static/style/square.css">
+    <script src="../static/js/square.js"></script>
+
+
+    <!-- gsap & barba -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="../static/js/cdnjs/barba.js"></script>
+    <script src="../static/js/unpkg/barba.js"></script>
+
+</head>
+
+<body data-barba="wrapper">
+    <div class="area">
+        <ul class="circles">
+            <li>QAQ</li>
+            <li>OAO</li>
+            <li>-V-</li>
+            <li>O o O</li>
+            <li>==</li>
+            <li>T-T</li>
+            <li>UwU</li>
+            <li>oWo</li>
+            <li>._.</li>
+            <li>-_-</li>
+        </ul>
+    </div>
+    <div class="app" data-barba="container" data-barba-namespace="question-section">
+        <div class="content">
+
+            <div class="group">
+                <div class="title">遊戲規則</div>
+            </div>
+            <div class="group">
+                抽完牌後拿到 王子 的人閉眼，讓其餘玩家確認身分
+            </div>
+            <div class="group">
+                核對完身分 王子可以問每個人一個問題 並在詢問隨意玩家一個問題
+            </div>
+            <div class="group">
+                且王子只能問每個玩家這三個問題:
+            </div>
+            <div class="group">
+                <ul class="qlist">
+                    <li>公主在哪裡 ?</li>
+                    <li>你的角色是甚麼 ?</li>
+                    <li>某一個玩家的角色是甚麼 ?</li>
+                </ul>
+            </div>
+    
+            <div class="group">
+                玩家必須遵循自己的角色卡規作答
+            </div>
+    
+            <div class="group">
+                最先拿到7分的玩家獲勝!!
+            </div>
+
+            <div class="group">
+                <ul class="qlist">
+                    <li>王子猜對公主 => 自己得一分 公主派得一分</li>
+                    <li>王子猜到中立派 => 中立派得一分</li>
+                    <li>王子猜到皇后派 => 皇后派得一分</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="func-bar">
+            <a href="/" id="back"><i class="fa-solid fa-house"></i></a>
+            <a href="/setting" id="settingBtn"><i class="fa-solid fa-gear"></i></a>
+        </div>
+    </div>
+
+</body>
+<script src="../static/js/pageAnim.js"></script>
+</html>
