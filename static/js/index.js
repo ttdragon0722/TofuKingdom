@@ -47,8 +47,8 @@ $(document).ready(function () {
         localStorage.setItem("Identity",JSON.stringify(Identity))
     }
     if (localStorage.getItem("PlayerAmount") == null) {
-        localStorage.setItem("PlayerAmount",4);
-        $("#players").val(4);
+        localStorage.setItem("PlayerAmount",3);
+        $("#players").val(3);
     }
 
     

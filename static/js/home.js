@@ -16,8 +16,8 @@ $(document).ready(function () {
     }
 
     players.on("change", function () {
-        if ($(this).val() < 4 ) {
-            $(this).val(4);
+        if ($(this).val() < 3 ) {
+            $(this).val(3);
         }
         
         if ($(this).val() > 8 ) {
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     minus_btn.click(function (e) {
         e.preventDefault();
-        if (players.val() > 4) {
+        if (players.val() > 3) {
             players.val(parseInt(players.val()) - 1);
             PlayerAmount = players.val();
             localStorage.setItem("PlayerAmount", PlayerAmount);
