@@ -4,6 +4,8 @@ $(document).ready(function () {
         localStorage.getItem("Identity")
     );
     let PlayerAmount = parseInt(localStorage.getItem("PlayerAmount"));
+    localStorage.removeItem("PlayerScores");
+
     const list = $(".qlist");
     const minus_btn = $(".minus");
     const add_btn = $(".add");
