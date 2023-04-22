@@ -1,5 +1,6 @@
 from flask import Flask,render_template,request  
 
+# 分支
 app = Flask(__name__,template_folder="templates")
 
 @app.route("/")
