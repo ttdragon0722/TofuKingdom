@@ -130,9 +130,8 @@ $(document).ready(function () {
         $(".play-func").append(
             `
             <div class="play-end">
-            
-            <a href="/" id="back"><i class="fa-solid fa-house"></i></a>
-            <a href="/play" id="startBtn">Replay</a>
+            <a href="/index.html" id="back"><i class="fa-solid fa-house"></i></a>
+            <a href="/play.html" id="startBtn">Replay</a>
             </div>`
         );
 
